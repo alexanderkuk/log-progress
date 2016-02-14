@@ -36,11 +36,11 @@ def log_progress(sequence, every=None, size=None):
         for index, record in enumerate(sequence, 1):
             if index == 1 or index % every == 0:
                 if is_iterator:
-                    label.value = '{index} / ?'.format(index=index)
+                    label.value = '{index} / ?'.format(index=index-1)
                 else:
                     progress.value = index
                     label.value = u'{index} / {size}'.format(
-                        index=index,
+                        index=index - 1,
                         size=size
                     )
             yield record
