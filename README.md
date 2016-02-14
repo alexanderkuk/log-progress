@@ -40,7 +40,7 @@ def log_progress(sequence, every=None, size=None):
                 else:
                     progress.value = index
                     label.value = u'{index} / {size}'.format(
-                        index=index,
+                        index=index - 1,
                         size=size
                     )
             yield record
