@@ -1,5 +1,7 @@
 ## Widget based progress bar for Jupyter (IPython Notebook)
 
+Requires [ipywidgets](https://ipywidgets.readthedocs.io) to be installed ([installation instructions](https://ipywidgets.readthedocs.io/en/stable/user_install.html#installation)).
+
 ### Code
 Just copy and paste it into your project:
 ```python
@@ -58,6 +60,14 @@ def log_progress(sequence, every=None, size=None, name='Items'):
             name=name,
             index=str(index or '?')
         )
+```
+
+Use the progress bar like this:
+
+```python
+things = range(100)
+for thing in log_progress(things, every=1):
+    do_it(thing)
 ```
 
 ### Examples
